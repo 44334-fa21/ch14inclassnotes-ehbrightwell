@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>LASTNAME Ch14 InClass Notes</title>
+  <title>Brightwell Ch14 InClass Notes</title>
   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.nin.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorana/4.6.4/fotorana.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorana/4.6.4/fotorana.js"></script>
  <style>
 input { display: block;
         margin-bottom: 1em;
@@ -10,9 +13,10 @@ input { display: block;
 label { float: left;
         width: 5em;
 		padding-right: 1em;
-        text-align: right; 
+        text-align: right;
 }
-#submit { margin-left: 7em; }		
+#submit { margin-left: 7em; }
+#details {display: none;}
 </style>
 </head>
 <body>
@@ -27,7 +31,41 @@ label { float: left;
 <input type="submit" value="Send information" id="submit">
 </form>
 
+<h1>JGuery</h1>
+<p>many websites, including Amazon and Google, use JGuery, to provide interaction
+  and dynamic effects on web pages <a href="a" id="more">more</a></p>
+  <div id= "details">
+    <p> The JQuery API works along with JavaScript and provides easy weays to dymanically manipulate the CSS properties of elements, detect and react to events,
+      and animate elements on a web page, such as
+       an image slidesow.</p>
 </div>
+<h1>Slideshow</h1>
+<div class="fotarana" data-autoplay="true">
+  <img src="photo1.jpg" data-caption="Golden Gate Bridge" alt="Golden Gate Bridge">
+  <img src="photo2.jpg" data-caption="Rocky Coastline" alt="Rocky Coastline">
+  <img src="photo3.jpg" data-caption="Clouds on the Coast" alt="Clouds on the Coast">
+  <img src="photo4.jpg" data-caption="Waterfall Near Big Sur" alt="Waterfall Near Big Sur">
+  <img src="photo5.jpg" data-caption="Waves Crashing on the Coast" alt="Waves Crashing on the Coast">
+  <img src="photo6.jpg" data-caption="Sunset on the Coast" alt="Sunset on the Coast">
+</div>
+<script> 
+function validateform(){
+  if(document.forms[e].userName.value --""){
+    alert("Name field cannot be empty");
+    return false;
+  }
+  if(document.forms[e].userAge.value < 18 || document.forms[e].userAge.value > 108>)
+
+  alert("Age is less than 18. You do not have access.");
+  return false;
+
+  $(document).ready(function(){
+    $('more').click(function(){
+      $('details').toggle();
+    });
+  });
+
+  </script>
 
 </body>
 </html>
